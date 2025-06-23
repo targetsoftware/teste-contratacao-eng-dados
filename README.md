@@ -94,14 +94,15 @@ Manipular e transformar dados de atendimentos com Spark usando Databricks.
 - Delimitador: Tabulação (`\t`)
 
 ## Tarefas
-1. Subir o arquivo para o Databricks.
+1. Importar o arquivo para o Databricks.
 2. Ler o arquivo com Spark:
-3. Criar uma **tabela Bronze** com os dados originais.
-4. Criar uma **tabela Silver** com:
+3. Criar um ou mais jobs no DataBricks para orquestrar os itens abaixo:
+4. Criar uma **tabela Bronze** com os dados originais.
+5. Criar uma **tabela Silver** com:
    - Conversão correta dos tipos de dados
    - Cálculo do tempo médio por especialista
    - Flag `Fechou_Acordo` (quando Situação = 'Resolvido' e Categoria = 'Acordo Fechado')
-5. Criar uma **tabela Gold** agregada com:
+6. Criar uma **tabela Gold** agregada com:
    - Total de atendimentos
    - Valor médio em cobrança
    - % de acordos fechados por UF e mês
